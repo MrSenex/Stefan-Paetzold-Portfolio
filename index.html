@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive CV - Stefan Paetzold</title>
-    <!-- Chosen Palette: Warm Neutrals (Slate, Zinc, Stone) -->
-    <!-- Application Structure Plan: The SPA is designed as a personal portfolio with a top-down narrative flow. It starts with a summary to provide an immediate impression. A top navigation bar allows quick access to key sections: Experience, Skills, and Education. The core of the application is an interactive vertical timeline for the 'Experience' section, which allows users to explore work history chronologically without being overwhelmed by text. A 'Skills' section now uses a categorized list to make abilities easy to digest. This structure was chosen to guide a potential employer through a story of growth and capability, moving from a high-level summary to detailed, interactive exploration, which is more engaging than a static document. -->
-    <!-- Visualization & Content Choices:
-        - Report Info: Work History -> Goal: Show Progression -> Viz/Presentation: Interactive Vertical Timeline -> Interaction: On-click reveals details for each role. -> Justification: More engaging and less cluttered than a long list. Shows career journey visually. -> Library/Method: HTML/CSS/JS.
-        - Report Info: Skills List -> Goal: Inform & Organize -> Viz/Presentation: Categorized List -> Interaction: Static content. -> Justification: Provides a clear, organized overview of capabilities without visual clutter. -> Library/Method: HTML/CSS.
-        - Report Info: Education/Summary -> Goal: Inform -> Viz/Presentation: Styled Text Blocks -> Interaction: Static content. -> Justification: Clear and direct presentation for essential information. -> Library/Method: HTML/CSS.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Stefan Paetzold</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
-
+<body>
+    
     <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-7xl">
+        <nav class="sticky top-0 bg-white/80 backdrop-blur-lg z-10 py-4 my-6">
+            <ul class="flex justify-center space-x-6 sm:space-x-8 text-lg font-medium text-slate-600">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+            </ul>
+        </nav>
 
-        <header id="home" class="text-center py-10 border-b-2 border-slate-200">
+        <header id="home" class="flex flex-col items-center justify-center min-h-screen text-center py-10 border-b-2 border-slate-200">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Stefan Paetzold</h1>
             <p class="mt-2 text-lg text-slate-600">Aspiring IT Professional</p>
             <div class="mt-4 flex justify-center items-center space-x-6 text-slate-500">
@@ -32,217 +29,50 @@
                 <span>&#8226;</span>
                 <span>+27 63 346 8933</span>
             </div>
+
+            <div class="w-full flex flex-col items-center gap-8 mt-10">
+                <div class="bg-white border border-slate-200 rounded-xl shadow-md p-8 w-full max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-semibold text-slate-800">Projects</h1>
+                    <h2 class="text-lg text-slate-600 mt-4">Stock & POS</h2>
+                    <p class="mt-2 text-slate-700 italic">This project is a comprehensive stock and point-of-sale (POS) system</p>
+                    <h2 class="mt-6 text-lg text-slate-600">Team Project</h2>
+                    <p class="mt-2 text-slate-700 italic">This is a team project for University</p>
+                    <h2 class="mt-6 text-lg text-slate-600">Portfolio Website</h2>
+                    <p class="mt-2 text-slate-700 italic">The website you are on is an ongoing University project</p>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl shadow-md p-8 w-full max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-semibold text-slate-800 mb-6">Skills</h1>
+                    <h2 class="text-lg font-bold text-slate-700 mt-4">Technical Skills</h2>
+                    <div class="text-slate-600 mt-2">
+                        Coding<br>
+                        Microsoft Office (Word, Excel, PowerPoint)<br>
+                        POS (Point of Sale) Systems
+                    </div>
+                    <h2 class="text-lg font-bold text-slate-700 mt-6">Soft Skills</h2>
+                    <div class="text-slate-600 mt-2">
+                        Customer Service<br>
+                        Communication (Verbal & Written)<br>
+                        Multitasking<br>
+                        Problem-Solving<br>
+                        Adaptability<br>
+                        Reliability<br>
+                        Detail-Oriented<br>
+                        Strong Work Ethic
+                    </div>
+                    <h2 class="text-lg font-bold text-slate-700 mt-6">Administrative & Practical Skills</h2>
+                    <div class="text-slate-600 mt-2">
+                        Filing<br>
+                        Cashiering<br>
+                        Cash Handling<br>
+                        Stocking<br>
+                        Administration<br>
+                        Driving<br>
+                        Wood Work
+                    </div>
+                </div>
+            </div>
         </header>
-
-        <nav class="sticky top-0 bg-f1f5f9/80 backdrop-blur-lg z-10 py-4 my-6">
-            <ul class="flex justify-center space-x-6 sm:space-x-8 text-lg font-medium text-slate-600">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            <section id="summary-section" class="py-12 px-4 bg-white rounded-xl shadow-sm">
-                <h2 class="text-3xl font-bold text-center text-slate-800 mb-6">Summary</h2>
-                <p class="text-center max-w-3xl mx-auto text-slate-600 leading-relaxed">
-                    Highly motivated and adaptable third-year BSc in IT student with a strong foundation in customer service, administration, and customer handling, seeking opportunities to apply transferable skills in a dynamic IT environment. Proven ability to communicate effectively, multitask, and manage responsibilities with an eye for detail. Eager to combine academic knowledge and practical experience to contribute to innovation in projects and grow within the technology sector. Willing to relocate for suitable career opportunities.
-                </p>
-            </section>
-
-            <section id="experience" class="py-16">
-                <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Professional Experience</h2>
-                <div class="max-w-3xl mx-auto">
-                    <p class="text-center text-slate-600 mb-8">
-                        This timeline showcases my professional journey, highlighting a diverse range of roles that have developed my skills in customer service, administration, and responsibility. Click on each role to see the key responsibilities and achievements.
-                    </p>
-                    <div class="relative border-l-2 border-slate-300 ml-6 space-y-10">
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="py-16 bg-white rounded-xl shadow-sm">
-                <h2 class="text-3xl font-bold text-center text-slate-800 mb-6">Skills</h2>
-                <p class="text-center max-w-3xl mx-auto text-slate-600 mb-12">
-                    My skills are categorized below, reflecting a blend of technical, soft, and administrative capabilities honed through my academic pursuits and professional experiences.
-                </p>
-                <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left px-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">Technical Skills</h3>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2">
-                            <li>Coding</li>
-                            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-                            <li>POS (Point of Sale) Systems</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">Soft Skills</h3>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2">
-                            <li>Customer Service</li>
-                            <li>Communication (Verbal & Written)</li>
-                            <li>Multitasking</li>
-                            <li>Problem-Solving</li>
-                            <li>Adaptability</li>
-                            <li>Reliability</li>
-                            <li>Detail-Oriented</li>
-                            <li>Strong Work Ethic</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">Administrative & Practical Skills</h3>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2">
-                            <li>Filing</li>
-                            <li>Cashiering</li>
-                            <li>Cash Handling</li>
-                            <li>Stocking</li>
-                            <li>Administration</li>
-                            <li>Driving</li>
-                            <li>Wood Work</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="education" class="py-16">
-                <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Education & Certifications</h2>
-                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-xl shadow-sm">
-                        <h3 class="text-xl font-bold text-slate-800">Bachelors of Science in Information Technology</h3>
-                        <p class="text-slate-600 mt-2">North-West University, Potchefstroom</p>
-                        <p class="text-slate-500 mt-1">January 2023 – Present</p>
-                        <p class="mt-4 text-slate-600">Pursuing a comprehensive IT degree, building foundational knowledge in programming, systems design, and technology.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm">
-                        <h3 class="text-xl font-bold text-slate-800">National Senior Certificate</h3>
-                        <p class="text-slate-600 mt-2">Global Leadership Academy, Jeffreys Bay</p>
-                        <p class="text-slate-500 mt-1">January 2018 – December 2020</p>
-                        <p class="mt-4 text-slate-600">Successfully completed high school education, providing a strong academic foundation.</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-sm md:col-span-2">
-                        <h3 class="text-xl font-bold text-slate-800">Licenses</h3>
-                        <p class="text-slate-600 mt-2">Driver's License</p>
-                        <p class="text-slate-500 mt-1">Present</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="text-center py-6 border-t-2 border-slate-200 mt-10">
-            <p class="text-slate-500">&copy; 2025 Stefan Paetzold. Interactive CV created with care.</p>
-        </footer>
     </div>
-
-    <script>
-        const experienceData = [
-            {
-                role: "Pet Sitter",
-                company: "Self-Employed",
-                location: "Jeffreys Bay, Eastern Cape",
-                period: "January 2022 – Present",
-                details: [
-                    "Managed daily care and well-being of pets, demonstrating reliability and adherence to specific instructions.",
-                    "Maintained household integrity, including cleanliness, and basic property management, ensuring owner peace of mind.",
-                    "Developed strong organizational skills and a high degree of responsibility in an unsupervised environment."
-                ]
-            },
-            {
-                role: "Waiter",
-                company: "The Mexican",
-                location: "Jeffreys Bay, Eastern Cape",
-                period: "January 2022 – February 2022",
-                details: [
-                    "Provided exceptional customer service in a fast-paced environment.",
-                    "Efficiently managed orders, payments, and table service.",
-                    "Honed communication and multitasking skills through direct customer interaction."
-                ]
-            },
-            {
-                role: "Waiter",
-                company: "St Francis Brewing Co",
-                location: "Saint Francis, Eastern Cape",
-                period: "January 2021 – December 2021",
-                details: [
-                    "Maintained cleanliness and organization of dining areas, contributing to operational efficiency.",
-                    "Assisted guests to ensure a positive and smooth dining experience.",
-                     "Managed high-stress situations calmly and professionally."
-                ]
-            },
-            {
-                role: "Waiter",
-                company: "Infood - Bakery & Deli",
-                location: "Jeffreys Bay, Eastern Cape",
-                period: "December 2020 – January 2021",
-                details: [
-                    "Greeted guests and ensured a positive dining experience.",
-                    "Handled transactions and operated POS systems accurately.",
-                    "Developed strong problem-solving skills in a dynamic setting."
-                ]
-            },
-            {
-                role: "Secretary",
-                company: "Geraldine Glennie Physiotherapists Inc.",
-                location: "Jeffreys Bay, Eastern Cape",
-                period: "December 2019 – January 2020",
-                details: [
-                    "Managed comprehensive front-desk operations, including scheduling, communications, and patient assistance.",
-                    "Processed payments accurately and maintained organized patient records, ensuring data integrity.",
-                    "Ensured accurate completion of administrative forms, demonstrating strong attention to detail."
-                ]
-            }
-        ];
-
-        const timelineContainer = document.querySelector('#experience .space-y-10');
-        experienceData.forEach(item => {
-            const timelineItem = document.createElement('div');
-            timelineItem.className = 'relative';
-            timelineItem.innerHTML = `
-                <div class="absolute w-6 h-6 bg-orange-400 rounded-full -left-9 mt-1.5 border-4 border-white"></div>
-                <div class="pl-4">
-                    <div class="cursor-pointer">
-                        <time class="mb-1 text-sm font-normal leading-none text-slate-500">${item.period}</time>
-                        <h3 class="text-lg font-semibold text-slate-800">${item.role} at ${item.company}</h3>
-                        <p class="text-base font-normal text-slate-500">${item.location}</p>
-                    </div>
-                    <div class="timeline-item-content mt-2 text-slate-600">
-                        <ul class="list-disc pl-5 space-y-1">
-                            ${item.details.map(d => `<li>${d}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-            timelineContainer.appendChild(timelineItem);
-
-            timelineItem.querySelector('.cursor-pointer').addEventListener('click', () => {
-                const content = timelineItem.querySelector('.timeline-item-content');
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        });
-
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section, header');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-    </script>
 </body>
 </html>
