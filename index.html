@@ -40,76 +40,97 @@
 
         <main>
             <section id="about" class="flex flex-col items-center justify-center min-h-[80vh] text-center py-10">
-                <h1 class="text-5xl md:text-7xl font-display font-bold text-slate-800 tracking-tight">Stefan <span class="text-indigo-600">Paetzold</span></h1>
-                <p class="mt-4 text-xl text-slate-600">Aspiring IT Professional</p>
-                <div class="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-500">
+                <h2 class="text-4xl md:text-7xl font-display font-bold text-center mx-auto text-slate-800 mb-12 inline-block px-6 py-12 rounded-xl bg-white/70 backdrop-blur-md shadow">
+                    Stefan <span class="text-indigo-600">Paetzold</span>
+                </h2>
+                <p class="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-500mb-12 inline-block px-6 py-2 rounded-xl bg-white/70 backdrop-blur-md shadow">Aspiring IT Professional</p>
+                <div class="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-500mb-12 inline-block px-6 py-2 rounded-xl bg-white/70 backdrop-blur-md shadow">
                     <span class="flex items-center"><i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> Jeffreys Bay, Eastern Cape</span>
                     <span class="hidden sm:inline">&#8226;</span>
                     <a href="mailto:2002stefan@gmail.com" class="flex items-center hover:text-indigo-600 transition-colors"><i class="fa-solid fa-envelope mr-2 text-slate-400"></i> 2002stefan@gmail.com</a>
                     <span class="hidden sm:inline">&#8226;</span>
                     <a href="tel:+27633468933" class="flex items-center hover:text-indigo-600 transition-colors"><i class="fa-solid fa-phone mr-2 text-slate-400"></i> +27 63 346 8933</a>
                 </div>
+
+                <div class="mt-8 flex justify-center items-center space-x-4">
+                    <a href="https://linkedin.com/in/stefan-paetzold-142981231" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center bg-indigo-600 text-white font-bold py-2 px-5 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                        <i class="fa-brands"></i>LinkedIn
+                    </a>
+                    <a href="https://github.com/mrsenex" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center bg-slate-800 text-white font-bold py-2 px-5 rounded-lg hover:bg-slate-900 transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                        <i class="fa-brands fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
             </section>
 
             <section id="projects" class="py-20 lg:py-15">
-                <h2 class="text-4xl font-display font-bold text-center text-slate-800 mb-12">My Projects</h2>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-display font-bold text-slate-800 inline-block px-6 py-2 rounded-xl bg-white/70 shadow">
+                        My Projects
+                    </h2>
+                </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                    <a href="https://github.com/mrsenex/" target="_blank" rel="noopener noreferrer"
+                       class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl block">
                         <h3 class="text-xl font-bold font-display text-indigo-600">Stock & POS System</h3>
-                        <p class="mt-2 text-slate-600 leading-relaxed">A comprehensive stock and point-of-sale (POS) system built with [mention technology, e.g., C# and .NET]. Features include inventory tracking, sales processing, and reporting.</p>
-                    </div>
-                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                        <p class="mt-2 text-slate-600 leading-relaxed">A comprehensive stock and point-of-sale (POS) system built with C# and .NET. Features include inventory tracking, sales processing, and reporting.</p>
+                    </a>
+                    <a href="https://github.com/mrsenex/" target="_blank" rel="noopener noreferrer"
+                       class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl block">
                         <h3 class="text-xl font-bold font-display text-indigo-600">University Team Project</h3>
-                        <p class="mt-2 text-slate-600 leading-relaxed">Collaborated on a team to develop [mention project type, e.g., a web application] for our software engineering module. My primary role was [mention your role, e.g., front-end development].</p>
-                    </div>
-                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                        <p class="mt-2 text-slate-600 leading-relaxed">Collaborated on a team to develop a web application for our software engineering module. My primary role was front-end development using ASP.NET Core.</p>
+                    </a>
+                    <a href="https://github.com/mrsenex/Stefans-Virtual-CV-Portfolio-Website" target="_blank" rel="noopener noreferrer"
+                       class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl block">
                         <h3 class="text-xl font-bold font-display text-indigo-600">Portfolio Website</h3>
                         <p class="mt-2 text-slate-600 leading-relaxed">Designed and built this personal portfolio from scratch using HTML and Tailwind CSS to showcase my skills and projects. Implemented responsive design and interactive elements.</p>
-                    </div>
+                    </a>
                 </div>
             </section>
             
-            <section id="skills" class="py-20 lg:py-24 bg-white/80 backdrop-blur-lg border border-slate-200 rounded-2xl">
-                <div class="max-w-4xl mx-auto px-6">
-                    <h2 class="text-4xl font-display font-bold text-center text-slate-900 mb-12 drop-shadow-lg bg-white/90 inline-block px-4 py-2 rounded-lg">
+            <section id="skills" class="py-20 lg:py-24">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-display font-bold text-slate-800 inline-block px-6 py-2 rounded-xl bg-white/70 shadow">
                         Skills
                     </h2>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Technical Skills Block -->
-                        <div class="bg-white/90 backdrop-blur rounded-xl shadow-md border border-slate-200 p-6 flex flex-col h-full">
-                            <h3 class="text-2xl font-display font-semibold text-indigo-600 mb-4 drop-shadow">Technical Skills</h3>
-                            <ul class="space-y-2 text-slate-700 list-disc list-inside">
-                                <li><strong>Languages:</strong> C#, Java, Python, HTML, CSS</li>
-                                <li><strong>Frameworks:</strong> .NET, ASP.NET Core</li>
-                                <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-                                <li>POS (Point of Sale) Systems</li>
-                            </ul>
-                        </div>
-                        <!-- Soft Skills Block -->
-                        <div class="bg-white/90 backdrop-blur rounded-xl shadow-md border border-slate-200 p-6 flex flex-col h-full">
-                            <h3 class="text-2xl font-display font-semibold text-indigo-600 mb-4 drop-shadow">Soft Skills</h3>
-                            <ul class="space-y-2 text-slate-700 list-disc list-inside">
-                                <li>Customer Service</li>
-                                <li>Communication (Verbal & Written)</li>
-                                <li>Problem-Solving & Adaptability</li>
-                                <li>Detail-Oriented with a Strong Work Ethic</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-white/90 backdrop-blur rounded-xl shadow-md border border-slate-200 p-6 flex flex-col h-full">
-                            <h3 class="text-2xl font-display font-semibold text-indigo-600 mb-4 drop-shadow">Administrative & Practical</h3>
-                            <ul class="space-y-2 text-slate-700 list-disc list-inside">
-                                <li>Filing, Cashiering & Cash Handling</li>
-                                <li>Stocking & Administration</li>
-                                <li>Valid Driver's License & Wood Work</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <h3 class="text-xl font-bold font-display text-indigo-600">Technical Skills</h3>
+                        <ul class="mt-2 space-y-2 text-slate-600 list-disc list-inside leading-relaxed">
+                            <li><strong>Languages:</strong> C#, Java, Python, HTML, CSS</li>
+                            <li><strong>Frameworks:</strong> .NET, ASP.NET Core</li>
+                            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                            <li>POS (Point of Sale) Systems</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <h3 class="text-xl font-bold font-display text-indigo-600">Soft Skills</h3>
+                        <ul class="mt-2 space-y-2 text-slate-600 list-disc list-inside leading-relaxed">
+                            <li>Customer Service</li>
+                            <li>Communication (Verbal & Written)</li>
+                            <li>Problem-Solving & Adaptability</li>
+                            <li>Detail-Oriented with a Strong Work Ethic</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+                        <h3 class="text-xl font-bold font-display text-indigo-600">Administrative & Practical</h3>
+                        <ul class="mt-2 space-y-2 text-slate-600 list-disc list-inside leading-relaxed">
+                            <li>Filing, Cashiering & Cash Handling</li>
+                            <li>Stocking & Administration</li>
+                            <li>Valid Driver's License & Wood Work</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
             <section id="education" class="py-20 lg:py-24">
-                <h2 class="text-4xl font-display font-bold text-center text-slate-800 mb-12">Education & Certifications</h2>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-display font-bold text-slate-800 inline-block px-6 py-2 rounded-xl bg-white/70 shadow">
+                        Education & Certifications
+                    </h2>
+                </div>
                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
                     <div class="bg-white border border-slate-200 p-6 rounded-xl">
                         <p class="text-sm font-medium text-indigo-600">Jan 2023 – Present</p>
