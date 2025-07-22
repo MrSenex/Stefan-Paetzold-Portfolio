@@ -23,3 +23,20 @@ html {
     color: #4f46e5; 
     transform: scale(1.1);
 }
+body {
+    background-image: url('background-pattern.png');
+    background-repeat: repeat;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-repeat: inherit;
+    opacity: 0.3; 
+    filter: blur(4px); 
+    pointer-events: none;
+}
