@@ -1,16 +1,44 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f1f5f9; /* slate-100 */
-    color: #27272a; /* zinc-800 */
+    background-color: #f1f5f9; 
+    color: #27272a; 
 }
 .nav-link {
     transition: color 0.3s;
 }
 .nav-link:hover, .nav-link.active {
-    color: #fb923c; /* orange-400 */
+    color: #fb923c; 
 }
 .timeline-item-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-link.active {
+    color: #4f46e5; 
+    transform: scale(1.1);
+}
+
+body {
+    background-image: url('background-pattern.svg');
+    background-repeat: repeat;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-repeat: inherit;
+    opacity: 0.3; 
+    filter: blur(8px); 
+    pointer-events: none;
 }
