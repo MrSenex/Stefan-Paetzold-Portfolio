@@ -3,99 +3,155 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefan Paetzold | IT Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Stefan Paetzold</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'display': ['Poppins', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-700">
     
     <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-7xl">
-        <nav class="sticky top-0 bg-white/80 backdrop-blur-lg z-10 py-4 my-6">
-            <ul class="flex justify-center space-x-6 sm:space-x-8 text-lg font-medium text-slate-600">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
+        <nav class="sticky top-0 bg-white/80 backdrop-blur-lg z-10 py-4 my-6 rounded-xl shadow-sm border border-slate-200">
+            <ul class="flex justify-center space-x-6 sm:space-x-8 text-lg font-medium text-slate-600" id="nav-links">
+                <li><a href="#home" class="nav-link hover:text-indigo-600 transition-all duration-300">Home</a></li>
+                <li><a href="#projects" class="nav-link hover:text-indigo-600 transition-all duration-300">Projects</a></li>
+                <li><a href="#skills" class="nav-link hover:text-indigo-600 transition-all duration-300">Skills</a></li>
+                <li><a href="#education" class="nav-link hover:text-indigo-600 transition-all duration-300">Education</a></li>
             </ul>
         </nav>
 
-        <header id="home" class="flex flex-col items-center justify-center min-h-screen text-center py-10 border-b-2 border-slate-200">
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Stefan Paetzold</h1>
-            <p class="mt-2 text-lg text-slate-600">Aspiring IT Professional</p>
-            <div class="mt-4 flex justify-center items-center space-x-6 text-slate-500">
-                <span>Jeffreys Bay, Eastern Cape</span>
-                <span>&#8226;</span>
-                <span>2002stefan@gmail.com</span>
-                <span>&#8226;</span>
-                <span>+27 63 346 8933</span>
-            </div>
-
-            <div class="w-full flex flex-col items-center gap-8 mt-10">
-                <div id="projects" class="bg-white border border-slate-200 rounded-xl shadow-md p-8 w-full max-w-2xl">
-                    <h1 class="text-4xl md:text-5xl font-semibold text-slate-800">Projects</h1>
-                    <h2 class="text-lg text-slate-600 mt-4">Stock & POS</h2>
-                    <p class="mt-2 text-slate-700 italic">This project is a comprehensive stock and point-of-sale (POS) system</p>
-                    <h2 class="mt-6 text-lg text-slate-600">Team Project</h2>
-                    <p class="mt-2 text-slate-700 italic">This is a team project for University</p>
-                    <h2 class="mt-6 text-lg text-slate-600">Portfolio Website</h2>
-                    <p class="mt-2 text-slate-700 italic">The website you are on is an ongoing University project</p>
+        <main>
+            <section id="home" class="flex flex-col items-center justify-center min-h-[80vh] text-center py-10">
+                <h1 class="text-5xl md:text-7xl font-display font-bold text-slate-800 tracking-tight">Stefan <span class="text-indigo-600">Paetzold</span></h1>
+                <p class="mt-4 text-xl text-slate-600">Aspiring IT Professional</p>
+                <div class="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-500">
+                    <span class="flex items-center"><i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> Jeffreys Bay, Eastern Cape</span>
+                    <span class="hidden sm:inline">&#8226;</span>
+                    <a href="mailto:2002stefan@gmail.com" class="flex items-center hover:text-indigo-600 transition-colors"><i class="fa-solid fa-envelope mr-2 text-slate-400"></i> 2002stefan@gmail.com</a>
+                    <span class="hidden sm:inline">&#8226;</span>
+                    <a href="tel:+27633468933" class="flex items-center hover:text-indigo-600 transition-colors"><i class="fa-solid fa-phone mr-2 text-slate-400"></i> +27 63 346 8933</a>
                 </div>
+            </section>
 
-                <div id="skills" class="bg-white border border-slate-200 rounded-xl shadow-md p-8 w-full max-w-2xl">
-                    <h1 class="text-4xl md:text-5xl font-semibold text-slate-800 mb-6">Skills</h1>
-                    <h2 class="text-lg font-bold text-slate-700 mt-4">Technical Skills</h2>
-                    <div class="text-slate-600 mt-2">
-                        Coding<br>
-                        Microsoft Office (Word, Excel, PowerPoint)<br>
-                        POS (Point of Sale) Systems
+            <section id="projects" class="py-20 lg:py-24">
+                <h2 class="text-4xl font-display font-bold text-center text-slate-800 mb-12">My Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                        <h3 class="text-xl font-bold font-display text-indigo-600">Stock & POS System</h3>
+                        <p class="mt-2 text-slate-600 leading-relaxed">A comprehensive stock and point-of-sale (POS) system built with [mention technology, e.g., C# and .NET]. Features include inventory tracking, sales processing, and reporting.</p>
                     </div>
-                    <h2 class="text-lg font-bold text-slate-700 mt-6">Soft Skills</h2>
-                    <div class="text-slate-600 mt-2">
-                        Customer Service<br>
-                        Communication (Verbal & Written)<br>
-                        Multitasking<br>
-                        Problem-Solving<br>
-                        Adaptability<br>
-                        Reliability<br>
-                        Detail-Oriented<br>
-                        Strong Work Ethic
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                        <h3 class="text-xl font-bold font-display text-indigo-600">University Team Project</h3>
+                        <p class="mt-2 text-slate-600 leading-relaxed">Collaborated on a team to develop [mention project type, e.g., a web application] for our software engineering module. My primary role was [mention your role, e.g., front-end development].</p>
                     </div>
-                    <h2 class="text-lg font-bold text-slate-700 mt-6">Administrative & Practical Skills</h2>
-                    <div class="text-slate-600 mt-2">
-                        Filing<br>
-                        Cashiering<br>
-                        Cash Handling<br>
-                        Stocking<br>
-                        Administration<br>
-                        Driving<br>
-                        Wood Work
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+                        <h3 class="text-xl font-bold font-display text-indigo-600">Portfolio Website</h3>
+                        <p class="mt-2 text-slate-600 leading-relaxed">Designed and built this personal portfolio from scratch using HTML and Tailwind CSS to showcase my skills and projects. Implemented responsive design and interactive elements.</p>
                     </div>
                 </div>
-
-                <section id="education" class="bg-white border border-slate-200 rounded-xl shadow-md p-8 w-full max-w-2xl">
-                    <h2 class="text-3xl font-bold text-center text-slate-800 mb-12">Education & Certifications</h2>
-                    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-center">
-                        <div class="bg-white p-8 rounded-xl shadow-sm">
-                            <h3 class="text-xl font-bold text-slate-800">Bachelors of Science in Information Technology</h3>
-                            <p class="text-slate-600 mt-2">North-West University, Potchefstroom</p>
-                            <p class="text-slate-500 mt-1">January 2023 – Present</p>
-                            <p class="mt-4 text-slate-600">Pursuing a comprehensive IT degree, building foundational knowledge in programming, systems design, and technology.</p>
+            </section>
+            
+            <section id="skills" class="py-20 lg:py-24 bg-white border border-slate-200 rounded-2xl">
+                <div class="max-w-4xl mx-auto px-6">
+                    <h2 class="text-4xl font-display font-bold text-center text-slate-800 mb-12">Core Competencies</h2>
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+                        <div>
+                            <h3 class="text-2xl font-display font-semibold text-indigo-600 mb-4">Technical Skills</h3>
+                            <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                                <li><strong>Languages:</strong> C#, Java, Python, HTML, CSS</li>
+                                <li><strong>Frameworks:</strong> .NET, ASP.NET Core</li>
+                                <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                                <li>POS (Point of Sale) Systems</li>
+                            </ul>
                         </div>
-                        <div class="bg-white p-8 rounded-xl shadow-sm">
-                            <h3 class="text-xl font-bold text-slate-800">National Senior Certificate</h3>
-                            <p class="text-slate-600 mt-2">Global Leadership Academy, Jeffreys Bay</p>
-                            <p class="text-slate-500 mt-1">January 2018 – December 2020</p>
-                            <p class="mt-4 text-slate-600">Successfully completed high school education, providing a strong academic foundation.</p>
+                        <div>
+                            <h3 class="text-2xl font-display font-semibold text-indigo-600 mb-4">Soft Skills</h3>
+                            <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                                <li>Customer Service</li>
+                                <li>Communication (Verbal & Written)</li>
+                                <li>Problem-Solving & Adaptability</li>
+                                <li>Detail-Oriented with a Strong Work Ethic</li>
+                            </ul>
                         </div>
-                        <div class="bg-white p-8 rounded-xl shadow-sm md:col-span-2">
-                            <h3 class="text-xl font-bold text-slate-800">Licenses</h3>
-                            <p class="text-slate-600 mt-2">Driver's License</p>
-                            <p class="text-slate-500 mt-1">Present</p>
+                        <div class="md:col-span-2">
+                             <h3 class="text-2xl font-display font-semibold text-indigo-600 mb-4">Administrative & Practical</h3>
+                             <ul class="space-y-2 text-slate-600 list-disc list-inside">
+                                <li>Filing, Cashiering & Cash Handling</li>
+                                <li>Stocking & Administration</li>
+                                <li>Valid Driver's License & Wood Work</li>
+                             </ul>
                         </div>
                     </div>
-                </section>
-            </div>
-        </header>
+                </div>
+            </section>
+
+            <section id="education" class="py-20 lg:py-24">
+                <h2 class="text-4xl font-display font-bold text-center text-slate-800 mb-12">Education & Certifications</h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+                    <div class="bg-white border border-slate-200 p-6 rounded-xl">
+                        <p class="text-sm font-medium text-indigo-600">Jan 2023 – Present</p>
+                        <h3 class="text-xl font-bold text-slate-800 mt-1">Bachelors of Science in IT</h3>
+                        <p class="text-slate-500 mt-1">North-West University, Potchefstroom</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-6 rounded-xl">
+                        <p class="text-sm font-medium text-indigo-600">Jan 2018 – Dec 2020</p>
+                        <h3 class="text-xl font-bold text-slate-800 mt-1">National Senior Certificate</h3>
+                        <p class="text-slate-500 mt-1">Global Leadership Academy, Jeffreys Bay</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-6 rounded-xl">
+                        <p class="text-sm font-medium text-indigo-600">Present</p>
+                        <h3 class="text-xl font-bold text-slate-800 mt-1">Driver's License</h3>
+                        <p class="text-slate-500 mt-1">Code B (Manual)</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
+    
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
