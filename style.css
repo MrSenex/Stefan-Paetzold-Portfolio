@@ -28,6 +28,7 @@ body {
     background-image: url('background-pattern.svg');
     background-repeat: repeat;
     position: relative;
+    background-attachment: fixed;
 }
 
 
